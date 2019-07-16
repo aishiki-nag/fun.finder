@@ -13,7 +13,7 @@
         <!--Fun Finder-->
         <scene sceneID="K9S-QK-Lw3">
             <objects>
-                <tableViewController id="AFq-Cj-RNu" sceneMemberID="viewController">
+                <tableViewController id="AFq-Cj-RNu" customClass="PhotoTableTableViewController" customModule="fun_finder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dwL-Cp-OIa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="6px-QS-ZGQ">
             <objects>
-                <viewController id="1rK-D9-9FM" sceneMemberID="viewController">
+                <viewController id="1rK-D9-9FM" customClass="PhotoTableTableViewController" customModule="fun_finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A4B-QN-WLV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,11 +58,17 @@
                                 <rect key="frame" x="52" y="620" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="takeSelfieTapped:" destination="1rK-D9-9FM" eventType="touchUpInside" id="x7x-3p-jik"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQz-E4-a2s">
                                 <rect key="frame" x="293" y="620" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibraryTapped:" destination="1rK-D9-9FM" eventType="touchUpInside" id="9rA-bu-lT9"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="R7a-RQ-v9C">
                                 <rect key="frame" x="95" y="242" width="240" height="128"/>
@@ -81,9 +87,12 @@
                                 <state key="normal" title="Save"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUO-v8-fEe">
-                                <rect key="frame" x="181" y="620" width="52" height="30"/>
+                                <rect key="frame" x="181" y="620" width="52" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Albums"/>
+                                <connections>
+                                    <action selector="albumTapped:" destination="1rK-D9-9FM" eventType="touchUpInside" id="Xcr-sh-zjR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
